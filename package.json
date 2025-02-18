@@ -1,0 +1,46 @@
+{
+  "name": "example-with-authjs",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "vinxi dev",
+    "build": "node -r dotenv/config ./node_modules/vinxi/bin/cli.mjs build",
+    "start": "node -r dotenv/config .output/server/index.mjs",
+    "preview": "wrangler pages dev dist",
+    "lint": "eslint --fix ."
+  },
+  "dependencies": {
+    "@auth/core": "0.37.0",
+    "@solid-mediakit/auth": "^3.1.2",
+    "@solidjs/meta": "^0.29.4",
+    "@solidjs/router": "^0.15.3",
+    "@solidjs/start": "^1.1.1",
+    "cookie-es": "^1.2.2",
+    "dotenv": "^16.3.1",
+    "solid-js": "^1.9.4",
+    "unocss": "^66.0.0",
+    "vinxi": "^0.5.3",
+    "wrangler": "^3.109.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.2.1",
+    "@types/node": "^22.13.4",
+    "@typescript-eslint/eslint-plugin": "^8.24.1",
+    "@typescript-eslint/parser": "^8.24.1",
+    "eslint": "^9.20.1",
+    "eslint-plugin-solid": "^0.14.5",
+    "typescript": "^5.7.3"
+  },
+  "trustedDependencies": [
+    "@parcel/watcher",
+    "esbuild",
+    "sharp",
+    "workerd"
+  ],
+  "overrides": {
+    "cookie": "npm:cookie-es@^1.2.2"
+  }
+}
