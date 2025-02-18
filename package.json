@@ -1,6 +1,7 @@
 {
   "name": "example-with-authjs",
   "type": "module",
+  "packageManager": "bun@1.2.3",
   "engines": {
     "node": ">=22"
   },
