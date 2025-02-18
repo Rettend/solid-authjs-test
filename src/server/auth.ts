@@ -9,20 +9,11 @@ declare module '@auth/core/types' {
   }
 }
 
-const required = {
-  AUTH_GITHUB_ID: serverEnv.AUTH_GITHUB_ID,
-  AUTH_GITHUB_SECRET: serverEnv.AUTH_GITHUB_SECRET,
-  AUTH_SECRET: serverEnv.AUTH_SECRET,
-}
-
-// eslint-disable-next-line no-console
-console.log('required', required)
-
 export const authOptions: SolidAuthConfig = {
   providers: [
     GitHub({
-      clientId: serverEnv.AUTH_GITHUB_ID!,
-      clientSecret: serverEnv.AUTH_GITHUB_SECRET!,
+      clientId: serverEnv.AUTH_GITHUB_ID,
+      clientSecret: serverEnv.AUTH_GITHUB_SECRET,
     }),
   ],
   trustHost: true,
