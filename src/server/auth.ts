@@ -1,7 +1,6 @@
 import type { SolidAuthConfig } from '@solid-mediakit/auth'
 import GitHub from '@auth/core/providers/github'
 import { serverEnv } from '~/env/server'
-import '~/server/fetch'
 
 declare module '@auth/core/types' {
   export interface Session {

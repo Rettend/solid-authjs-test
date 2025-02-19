@@ -6,6 +6,9 @@ export default defineConfig({
     plugins: [
       UnoCSS(),
     ],
+    optimizeDeps: {
+      include: ['@auth/core'],
+    },
   },
   server: {
     preset: 'cloudflare_pages',
