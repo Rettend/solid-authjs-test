@@ -11,6 +11,9 @@ export default defineConfig({
     preset: 'cloudflare_pages',
     prerender: {
       routes: [],
+      ignore: [
+        '/api/auth/**',
+      ],
       crawlLinks: true,
       failOnError: true,
     },

@@ -1,7 +1,11 @@
 import type { SolidAuthConfig } from '@solid-mediakit/auth'
 import GitHub from '@auth/core/providers/github'
 import { serverEnv } from '~/env/server'
-import 'dotenv/config'
+import '~/server/fetch'
+
+if (!globalThis.fetch) {
+  globalThis.fetch = fetch.bind(globalThis)
+}
 
 declare module '@auth/core/types' {
   export interface Session {
