@@ -12,13 +12,13 @@ export default defineConfig({
   },
   server: {
     preset: 'cloudflare_pages',
-    prerender: {
-      routes: [],
-      ignore: [
-        '/api/**',
-      ],
-      crawlLinks: true,
-      failOnError: false,
-    },
+    // prerender: {
+    //   routes: [],
+    //   ignore: [
+    //     '/api/**',
+    //   ],
+    //   crawlLinks: true,
+    //   failOnError: false,
+    // },
   },
 })
