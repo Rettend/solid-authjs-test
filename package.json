@@ -8,8 +8,6 @@
   "scripts": {
     "dev": "vinxi dev",
     "build": "vinxi build",
-    "build:env": "node -r dotenv/config ./node_modules/vinxi/bin/cli.mjs build",
-    "start": "node -r dotenv/config .output/server/index.mjs",
     "preview": "wrangler pages dev dist",
     "lint": "eslint --fix ."
   },
