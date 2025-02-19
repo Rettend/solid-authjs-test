@@ -3,10 +3,6 @@ import GitHub from '@auth/core/providers/github'
 import { serverEnv } from '~/env/server'
 import '~/server/fetch'
 
-if (!globalThis.fetch) {
-  globalThis.fetch = fetch.bind(globalThis)
-}
-
 declare module '@auth/core/types' {
   export interface Session {
     user?: DefaultSession['user']

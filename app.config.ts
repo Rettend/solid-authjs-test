@@ -12,10 +12,10 @@ export default defineConfig({
     prerender: {
       routes: [],
       ignore: [
-        '/api/auth/**',
+        '/api/**',
       ],
       crawlLinks: true,
-      failOnError: true,
+      failOnError: false,
     },
   },
 })
