@@ -16,5 +16,5 @@ export const authOptions: SolidAuthConfig = {
     }),
   ],
   trustHost: true,
-  basePath: import.meta.env.VITE_AUTH_PATH,
+  basePath: '/api/auth',
 }
