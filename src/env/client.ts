@@ -15,10 +15,10 @@ const env = clientScheme.safeParse(import.meta.env)
 
 if (env.success === false) {
   console.error(
-    '❌ Invalid environment variables:\n',
+    '❌ Invalid client environment variables:\n',
     ...formatErrors(env.error.format()),
   )
-  throw new Error('Invalid environment variables')
+  throw new Error('Invalid client environment variables')
 }
 
 export const clientEnv = env.data
